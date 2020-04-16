@@ -6,4 +6,4 @@ before_install:
   - docker build -t boretoinc/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run boretoinc/docker-react npm run test -- --coverage
+  - docker run -e CI=true boretoinc/docker-react npm run test
